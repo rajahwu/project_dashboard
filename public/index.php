@@ -4,12 +4,7 @@
 <?php  include(SHARED_PATH . '/public_backlink.php'); ?>
 
 <h1>my_dashboard root</h1>
-<?php 
+<a href="./todos">todos</a>
 
-$todo = Todo::find_all();
-echo '<pre>';
-var_dump($todo);
-echo '</pre>';
-?>
 
 <?php  include(SHARED_PATH . '/public_footer.php'); ?>

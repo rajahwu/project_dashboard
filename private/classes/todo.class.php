@@ -20,5 +20,12 @@ class Todo extends DatabaseObject {
         $this->title = $args['priority'] ?? 3;
         $this->title = $args['category_tag'] ?? '';
     }
+
+    static public function find_all_with_task() {
+        $sql = file_get_contents(PRIVATE_PATH . '/sql/find_all_todos.sql');
+        // $sql = "SELECT * FROM " . static::$table_name;
+        return static::find_by_sql($sql);
+      }
+    
 }
 ?>

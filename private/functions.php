@@ -52,6 +52,33 @@ if(!function_exists('money_format')) {
   }
 }
 
+
+function print_query_results_data($results, $v = false) {
+  foreach($results as $result) {
+      // pre header
+      $html = '<pre>';
+      $html .= "<br /><hr />";
+      echo $html;
+      if($v) {
+        //  title
+        $html = "<h2>var_dump:</h2>";
+        $html .= "<br />";
+        echo $html;
+        var_dump($result);
+      }
+      //  title
+      $html = "<h2>print_r:</h2>";
+      $html .= "<br />";
+      echo $html;
+      print_r($result);
+      // pre footer
+      $html = "<br /><hr />";
+      $html .= '</pre>';
+      echo $html;
+  }
+}
+
+
  function render_lesson_card($args) {
  $parsedown = new Parsedown();
  
