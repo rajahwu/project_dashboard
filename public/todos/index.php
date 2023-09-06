@@ -10,6 +10,7 @@ $todos = Todo::find_all();
 ?>
 
 <h1>Todos</h1>
+<a href="create.php">Add todo</a>
 <table id="inventory">
       <tr>
         <th>id</th>
