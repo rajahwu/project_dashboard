@@ -9,21 +9,23 @@ $todos = Todo::find_all();
 // show_todos_data($todos);
 ?>
 
-<h1>Todos</h1>
-<a href="create.php">Add todo</a>
-<table id="inventory">
-      <tr>
-        <th>id</th>
-        <th>priority</th>
-        <th>title</th>
-        <th>status</th>
-        <th>category_tag</th>
-        <th>description</th>
-        <th>&nbsp;</th>
-      </tr>
+<div class="prose">
 
-<?php foreach($todos as $todo) { ?>
+  <h1>Todos</h1>
+  <a href="create.php">Add todo</a>
+  <table id="inventory" class="table">
     <tr>
+      <th>id</th>
+      <th>priority</th>
+      <th>title</th>
+      <th>status</th>
+      <th>category_tag</th>
+      <th>description</th>
+      <th>&nbsp;</th>
+    </tr>
+    
+    <?php foreach($todos as $todo) { ?>
+      <tr>
         <td><?php echo h($todo->id); ?></td>
         <td><?php echo h($todo->priority); ?></td>
         <td><?php echo h($todo->title); ?></td>
@@ -32,9 +34,10 @@ $todos = Todo::find_all();
         <td><?php echo h($todo->description); ?></td>
         <td><a href="details.php?id=<?php echo $todo->id; ?>">View</a></td>
       </tr>
-<?php } ?>
-
-</table>
+      <?php } ?>
+      
+    </table>
+  </div>
 
 
 <?php  include(SHARED_PATH . '/public_footer.php'); ?>
