@@ -1,1 +1,6 @@
-<span>footer</span>
+      
+    <footer>
+    <h2>FOOTER</h2>
+    </footer>
+  </body>
+</html>
