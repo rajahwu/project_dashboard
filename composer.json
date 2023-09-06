@@ -1,0 +1,17 @@
+{
+    "name": "rajahwu/my_dashboard",
+    "autoload": {
+        "psr-4": {
+            "Rajahwu\\MyDashboard\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "rajahwu",
+            "email": "vmradford@gmail.com"
+        }
+    ],
+    "require": {
+        "erusev/parsedown": "^1.7"
+    }
+}

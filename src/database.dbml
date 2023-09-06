@@ -1,0 +1,31 @@
+Project Dashboard {
+    database_type: 'mySQL'
+}
+
+Table todo {
+    id int [pk, increment]
+    title varchar
+    description text
+    status int [note: "backlog, in_progress, complete"]
+    priority int [note: "array(1,2,3,4,5)"]
+    category_tag text [note: "csv of category_tag_names"]
+    // tasks[]
+}
+
+Table task {
+    id int [pk, increment]
+    title varchar
+    description text
+    todo_id int [ref: > todo.id]
+    is_complete bool
+    // instructions[]
+}
+
+Table instruction {
+    id int [pk, increment]
+    description text
+    task_id int [ref: > task.id]
+    is_complete bool [default: false]
+    is_ordered bool [default: true]
+    step int [default: 0, increment, note: "is_ordered ?? instructions['length'] + 1" ]
+}
