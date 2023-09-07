@@ -6,7 +6,18 @@
 <?php 
 
 $todos = Todo::find_all();
+// $tasks = Task::find_all() ?? null;
+// $instructions = Instruction::find_all() ?? null;
 // show_todos_data($todos);
+// $todos_with_tasks = Todo::find_all_with_task();
+
+// print_query_results_data($todos_with_tasks);
+echo "<pre>";
+// print_r($todos_with_tasks);
+  // print_r($todos);
+  // print_r($tasks);
+  // print_r($instructions);
+echo "</pre>";
 ?>
 
 <div class="prose">

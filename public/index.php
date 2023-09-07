@@ -9,7 +9,7 @@
     <div class="max-w-md">
       <h1 class="text-5xl font-bold">Hello User</h1>
       <p class="py-6">Welcome to my Dashboard</p>
-      <a href="./todos" class="btn btn-primary">Get Started</a>
+      <a href="./todos" class="btn btn-primary">See Todo</a>
     </div>
   </div>
 </div>
